@@ -1,0 +1,301 @@
+@font-face {
+    font-family: 'Neue Haas';
+    src: url('../tipografias/NeueHaasDisplayRoman.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Haas';
+    src: url('../tipografias/NeueHaasDisplayBold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Haas';
+    src: url('../tipografias/NeueHaasDisplayBlack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anonymous Pro';
+    src: url('../tipografias/AnonymousPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anonymous Pro';
+    src: url('../tipografias/AnonymousPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+:root {
+    --bg-yellow: #f0ed45;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --font-festival: 'Neue Haas', 'Anonymous';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-black);
+    color: var(--color-black);
+    font-family: var(--font-body);
+}
+
+
+
+/* BARRA NAVEGACION */
+.barra {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 60px;
+    background-color: var(--bg-yellow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.barra .logo img {
+    height: 35px;
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.nav-links li a {
+    font-family: 'Anonymous Pro', monospace;
+    font-weight: 400;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    color: var(--color-black);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--color-white);
+}
+
+
+/* Botón TICKETS· */
+.nav-links .btn-tickets {
+    font-family: 'Neue Haas', sans-serif !important;
+    font-weight: 900;
+    font-size: 0.82rem;
+    letter-spacing: 0.5px;
+    background-color: var(--color-black);
+    color: var(--bg-yellow);
+    padding: 6px 14px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+}
+
+.nav-links .btn-tickets:hover {
+    background-color: #222222;
+    color: var(--bg-yellow);
+}
+
+.nav-links li a.btn-tickets:hover {
+    color: #ffffff;
+    background-color: #222222;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger img {
+    width: 26px;
+    height: auto;
+    display: block;
+}
+
+
+/* PORTADA RUSOWSKY */
+#hero {
+    position: relative;
+    width: 100%;
+    height: 68vh;
+    min-height: 420px;
+    overflow: hidden;
+    background-color: #111;
+}
+
+.hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.hero-center-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.hero-center-logo img {
+    width: 220px;
+    max-width: 30vw;
+    display: block;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+}
+
+
+
+/* ARTISTAS */
+#artistas {
+    background-color: var(--color-black);
+    width: 100%;
+    padding-top: 1.5rem;
+}
+
+.titulo-contenedor {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.titulo-artistas {
+    font-family: 'Neue Haas', sans-serif;
+    font-weight: 900;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+    background-color: var(--bg-yellow);
+    color: var(--color-black);
+    padding: 5px 18px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+
+.artistas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1.5px black;
+}
+
+.artistas-grid .columna {
+    border-right: 1.5px black;
+    border-bottom: 1.5px black;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.columna img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover; 
+    display: block;
+}
+
+.columna p {
+    color: var(--color-white);
+    font-family: 'Anonymous Pro', monospace;
+    font-weight: 400;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 1.2rem 0;
+    background-color: var(--color-black);
+}
+
+
+.boton-contenedor {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+
+.btn-ver-mas {
+    font-family: 'Neue Haas', sans-serif;
+    font-weight: 900;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    background-color: var(--bg-yellow);
+    color: var(--color-black);
+    padding: 8px 18px;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.2s ease;
+}
+
+.btn-ver-mas:hover {
+   color: var(--color-white);
+}
+
+
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-yellow);
+        padding: 1.5rem 0;
+        gap: 1.2rem;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero-center-logo img {
+        width: 160px;
+    }
+
+    .artistas-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1.5rem;
+        border-top: none;
+    }
+
+    .artistas-grid .columna {
+        border-right: none;
+        border-bottom: 1.5px black;
+        margin-bottom: 1.5rem;
+    }
+
+    .columna img {
+        height: 280px;
+    }
+}
