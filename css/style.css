@@ -252,6 +252,95 @@ body {
 }
 
 
+/* FOOTER */
+#footer {
+   background-color: var(--color-black);
+    color: var(--color-white);
+    width: 100%;
+    padding: 3rem 5rem 4rem 5rem;
+}
+
+.footer-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.footer-info {
+    display: flex;
+    align-items: flex-end;
+    gap: 3.5rem;
+}
+
+.info {
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+
+.info p {
+    white-space: pre-line;
+    margin-bottom: 0.2rem;
+}
+
+.info .info-titulo {
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.redes-iconos {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.redes-iconos img {
+    width: 22px;
+    height: 22px;
+    display: block;
+    object-fit: contain;
+}
+
+.footer-marcas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.logo-festival-footer img {
+    height: 55px;
+    width: auto;
+    display: block;
+}
+
+.sponsors {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.sponsors img {
+    height: 25px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.redes-iconos a img {
+    width: 22px;
+    height: 22px;
+    display: block;
+    transition: opacity 0.2s ease;
+}
+
+.redes-iconos a:hover img {
+    opacity: 0.6;
+}
+
 
 
 
