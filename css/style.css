@@ -55,6 +55,8 @@ body {
 
 
 
+/* INDEX.HTML */
+
 /* BARRA NAVEGACION */
 .barra {
     position: sticky;
@@ -252,6 +254,7 @@ body {
 }
 
 
+
 /* FOOTER */
 #footer {
    background-color: var(--color-black);
@@ -344,9 +347,137 @@ body {
 
 
 
+/* TIENDA.HTML */
+
+/* Vídeo */
+.video-contenedor {
+    width: 100%;
+    height: 70vh;
+    min-height: 450px;
+    background-color: var(--color-black);
+}
+
+.video-contenedor iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* Producto */
+#producto-tienda {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fotos-producto {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 3.5rem;
+    width: 100%;
+    max-width: 850px;
+}
+
+.fotos-producto img {
+    width: 30%;
+    max-width: 240px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.info-producto {
+    text-align: center;
+    max-width: 620px;
+    font-family: 'Anonymous Pro', monospace;
+}
+
+.titulo-producto {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.5px;
+}
+
+.subtitulo-producto {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+    color: #ccc;
+}
+
+.precio-producto {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.btn-anadir {
+    font-family: 'Neue Haas', sans-serif;
+    font-weight: 900;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    background-color: var(--bg-yellow);
+    color: var(--color-black);
+    padding: 6px 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.2s ease;
+}
+
+.btn-anadir:hover {
+    color: var(--color-white);
+}
+
+.descripcion-producto {
+    margin-top: 1.2rem;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.descripcion-producto p {
+    margin-bottom: 1.2rem;
+}
+
+.descripcion-producto .cuidados {
+    font-size: 0.72rem;
+    color: #999;
+    line-height: 1.5;
+    margin-top: 1.8rem;
+}
+
+/* Galería */
+#galeria-tienda {
+    width: 100%;
+    background-color: var(--color-black);
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+
 
 /* RESPONSIVE */
+
 @media (max-width: 768px) {
+
     .hamburger {
         display: block;
     }
@@ -380,11 +511,99 @@ body {
 
     .artistas-grid .columna {
         border-right: none;
-        border-bottom: 1.5px black;
+        border-bottom: 1.5px solid black;
         margin-bottom: 1.5rem;
     }
 
     .columna img {
         height: 280px;
+    }
+
+    .video-contenedor {
+        height: 40vh;
+        min-height: 250px;
+    }
+
+    .fotos-producto {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .fotos-producto img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .galeria-grid img {
+        height: 180px;
+    }
+
+    .galeria-grid .foto-ancha {
+        grid-column: span 2;
+        height: 220px;
+    }
+
+    #footer {
+        padding: 3.5rem 1.2rem 2rem 1.2rem;
+    }
+
+    .footer-contenedor {
+        flex-direction: column-reverse;
+        gap: 0.8rem;
+        width: 100%;
+    }
+
+    .footer-marcas {
+        width: 100%;
+        align-items: flex-end;
+        gap: 0.6rem;
+    }
+
+    .logo-festival-footer img {
+        height: 38px;
+    }
+
+    .sponsors {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .sponsors img {
+        height: 16px;
+    }
+
+    .footer-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .info {
+        font-size: 0.55rem;
+        line-height: 1.4;
+    }
+
+    .info .info-titulo {
+        margin-bottom: 0.4rem;
+    }
+
+    .redes-iconos {
+        display: flex;
+        gap: 0.4rem;
+        margin-top: 0.3rem;
+    }
+
+    .redes-iconos img {
+        width: 15px;
+        height: 15px;
     }
 }
