@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIENDA FESTIVAL B</title>
+    <title>ABOUT FESTIVAL B</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-     <!-- BARRA DE NAVEGACIÓN -->
+    <!-- BARRA DE NAVEGACIÓN -->
     <nav class="barra">
         <div class="logo">
             <a href="index.html">
@@ -28,48 +28,38 @@
         </div>
     </nav>
 
-    <!-- VÍDEO -->
-    <div class="video-contenedor">
-        <video controls loop playsinline src="multimedia/video hero tienda.m4v"></video>
-    </div>
 
-    <!-- PRODUCTO -->
-    <section id="producto-tienda">
-        <div class="fotos-producto">
-            <img src="multimedia/camisa delantera.png" alt="Camisa delantera">
-            <img src="multimedia/camisa trasera.png" alt="Camisa trasera">
+    <!-- HERO -->
+    <header id="hero">
+        <img class="hero-bg" src="multimedia/imagen ralphie hero.png" alt="Ralphie">
+        <div class="hero-center-logo">
+            <img src="multimedia/LOGO.png" alt="Festival B">
         </div>
+    </header>
 
-        <div class="info-producto">
-            <h3 class="titulo-producto">Voll-Damm x FSTVL·B x BYLEGUARD</h3>
-            <p class="subtitulo-producto">Camisa oficial 2026</p>
-            <p class="precio-producto">44,95</p>
 
-            <div class="boton-contenedor">
-                <a href="#" class="btn-anadir">AÑADIR·</a>
+    <!-- ABOUT Y FORMULARIO -->
+    <main class="seccion-about">
+        <p class="texto-about">
+            EL FESTIVAL•B ES UNA CITA CON LA MÚSICA DEL MAÑANA Y EL PRINCIPAL ESCAPARATE EN BARCELONA DE LAS TENDENCIAS MUSICALES Y LOS SONIDOS ALTERNATIVOS MÁS FRESCOS. UN FESTIVAL ÚNICO QUE ABRAZA LA TENDENCIA Y TOMA EL POLVO EN LA CARA B DE LA ESCENA MUSICAL, DESPLEGANDO DURANTE EL ÚLTIMO FIN DE SEMANA DE SEPTIEMBRE EN EL PARC DEL FÒRUM, UNA EXQUISIDA SELECCIÓN DE PROPUESTAS MUSICALES QUE HOY DÍA INCENDÍAN LAS DIVERSAS ESCENAS INDEPENDO.
+        </p>
+
+        <form class="formulario-newsletter">
+            <h3 class="newsletter-titulo">NEWSLETTER:</h3>
+
+            <div class="campo-form">
+                <label for="nombre">NOMBRE:</label>
+                <input type="text" id="nombre" name="nombre">
             </div>
 
-            <div class="descripcion-producto">
-                <p>A la tercera, va la camisa; la ocasión lo merece.</p>
-                
-                <p>Voll-Damm une fuerzas con el diseñador de moda BYLEGUARD para celebrar la tercera edición de la marca en el FSTVL·B con un ítem inédito: la primera camisa oficial de un festival de música.</p>
-                
-                <p>Inspirada por los valores urbanos del FSTVL·B, y confeccionada en tejido Neo Oxford D073, con una composición de 100% algodón orgánico y un gramaje de 140 g/m², esta es una camisa a la altura de las grandes ocasiones.</p>
-                
-                <p class="cuidados">Cuidados: Lavar siempre del revés, en ciclo delicado y agua fría (máx. 30 °C). No usar lejía ni blanqueador. No secar en secadora. Planchar a temperatura media. No lavar en seco.<br>Disponible en unidades limitadas.</p>
+            <div class="form">
+                <label for="mail">MAIL:</label>
+                <input type="email" id="mail" name="mail">
             </div>
-        </div>
-    </section>
-    
-    <!-- FOTOS -->
-    <section id="galeria-tienda">
-        <div class="galeria-grid">
-            <img src="multimedia/MODELO 2 CAMISA 1.png" alt="Modelo 1">
-            <img src="multimedia/MODELOS CAMISA 1.png" alt="Modelos en grupo">
-            <img src="multimedia/CERVEZA FOTO.png" alt="Cerveza">
-            <img src="multimedia/MODELO CAMISA 1.png" alt="Modelo 2">
-        </div>
-    </section>
+
+            <button type="submit" class="btn-enviar">ENVIAR</button>
+        </form>
+    </main>
 
 
         <!-- FOOTER -->

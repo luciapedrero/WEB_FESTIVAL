@@ -355,14 +355,16 @@ body {
     height: 70vh;
     min-height: 450px;
     background-color: var(--color-black);
+    overflow: hidden;
 }
 
-.video-contenedor iframe {
+.video-contenedor video {
     width: 100%;
     height: 100%;
-    border: none;
+    object-fit: cover;
     display: block;
 }
+
 
 /* Producto */
 #producto-tienda {
@@ -469,6 +471,78 @@ body {
     object-fit: cover;
     display: block;
 }
+
+
+
+
+/* ABOUT */
+
+.seccion-about {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 5rem;
+    font-family: 'Anonymous Pro', monospace;
+}
+
+.texto-about {
+    max-width: 530px;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    letter-spacing: 0.5px;
+    margin-bottom: 4rem;
+}
+
+.formulario-newsletter {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-titulo {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+}
+
+.campo-form, .form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.6rem;
+}
+
+.formulario-newsletter label {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+}
+
+.formulario-newsletter input {
+    background: transparent;
+    border: none;
+    border-bottom: 1.5px solid var(--color-white);
+    color: var(--color-white);
+    font-family: 'Anonymous Pro', monospace;
+    outline: none;
+    padding: 2px 0;
+}
+
+.btn-enviar {
+    align-self: flex-start;
+    margin-top: 1rem;
+    font-family: 'Neue Haas', sans-serif;
+    font-weight: 900;
+    font-size: 0.85rem;
+    background-color: var(--bg-yellow);
+    color: var(--color-black);
+    padding: 6px 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-enviar:hover {
+    color: var(--color-white);
+}
+
 
 
 
@@ -605,5 +679,9 @@ body {
     .redes-iconos img {
         width: 15px;
         height: 15px;
+    }
+
+    .seccion-about {
+        padding: 3rem 1.4rem;
     }
 }
