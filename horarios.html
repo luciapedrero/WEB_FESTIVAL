@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT FESTIVAL B·</title>
+    <title>HORARIOS FESTIVAL B·</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="multimedia/LOGO BUSCADOR.png">
 </head>
 <body>
-    <!-- BARRA DE NAVEGACIÓN -->
+     <!-- BARRA DE NAVEGACIÓN -->
     <nav class="barra">
         <div class="logo">
             <a href="index.html">
@@ -30,40 +30,47 @@
     </nav>
 
 
-    <!-- HERO -->
-    <header id="hero">
-        <img class="hero-bg" src="multimedia/imagen ralphie hero.png" alt="Ralphie">
-        <div class="hero-center-logo">
-            <img src="multimedia/LOGO.png" alt="Festival B">
-        </div>
-    </header>
+    <!-- SECCIÓN HORARIOS Y CARTELERÍA -->
+    <main class="seccion-horarios">
 
+        <!-- JUEVES -->
+        <article class="bloque-dia">
+            <h2 class="etiqueta-dia">JUEVES 17 DE SEPTIEMBRE·</h2>
+            <p class="texto-horario">
+                EN VOLL-DAMM ACTUARÁN LAS PETUNIAS A LAS 17:15, JIMENA AMARILLO A LAS 18:30, NATALIA LACUNZA A LAS 20:00 Y MALA GESTIÓN A LAS 21:30. ADIDAS ORIGINALS RECIBIRÁ A RALY A LAS 17:30, TARCHI A LAS 19:00, C MARÍ A LAS 20:30 Y LORNA A LAS 22:00.
+            </p>
+        </article>
 
-    <!-- ABOUT Y FORMULARIO -->
-    <main class="seccion-about">
-        <p class="texto-about">
-            EL FESTIVAL•B ES UNA CITA CON LA MÚSICA DEL MAÑANA Y EL PRINCIPAL ESCAPARATE EN BARCELONA DE LAS TENDENCIAS MUSICALES Y LOS SONIDOS ALTERNATIVOS MÁS FRESCOS. UN FESTIVAL ÚNICO QUE ABRAZA LA TENDENCIA Y TOMA EL POLVO EN LA CARA B DE LA ESCENA MUSICAL, DESPLEGANDO DURANTE EL ÚLTIMO FIN DE SEMANA DE SEPTIEMBRE EN EL PARC DEL FÒRUM, UNA EXQUISIDA SELECCIÓN DE PROPUESTAS MUSICALES QUE HOY DÍA INCENDÍAN LAS DIVERSAS ESCENAS INDEPENDO.
-        </p>
+        <!-- VIERNES -->
+        <article class="bloque-dia">
+            <h2 class="etiqueta-dia">VIERNES 18 DE SEPTIEMBRE·</h2>
+            <p class="texto-horario">
+                VOLL-DAMM PROGRAMA A LEÏTI (17:20), D. VALENTINO (19:20), MUSHKA (21:35) Y YUNG BEEF (23:55). EN •B ESTARÁN AKRIILA (18:20), JUICY BAE (20:25) Y MVRK (22:50). ADIDAS ORIGINALS SUMA A ULTRALONE (17:15), STEREO MADNESS (18:15), CLAUDIO MONTANA (19:40), 8BELIAL (20:50), LADIFERENCIA2006 (22:05) Y XIYO Y FERNANDEZZ (23:15). RA•B X JÄGER ARRANCA CON DJ BELLY PHAT A LAS 17:00 Y CONTINÚA CON MUNA KHALED A LAS 19:00, AZOMBIKE A LAS 21:00 Y AKAZIE A LAS 23:00.
+            </p>
+        </article>
 
-        <form class="formulario-newsletter">
-            <h3 class="newsletter-titulo">NEWSLETTER:</h3>
+        <!-- SÁBADO -->
+        <article class="bloque-dia">
+            <h2 class="etiqueta-dia">SÁBADO 19 DE SEPTIEMBRE·</h2>
+            <p class="texto-horario">
+                EN VOLL-DAMM SE SUCEDERÁN GAVINA.MP3 (16:50), PABLOPABLO (19:00), GUITARRICADELAFUENTE (21:00), RUSOWSKY (23:30) Y CUPIDO (02:00). •B TENDRÁ A ALOSA (17:50), MARIA ARNAL (20:00), LA PLAZUELA (22:15) Y SANGUIJUELAS DEL GUADIANA (00:45). ADIDAS ORIGINALS ANUNCIA A ÁNGELES TOLEDANO A LAS 19:00, REBE A LAS 20:55, TRISTÁN! A LAS 22:15 Y LA ÉLITE A LAS 23:45. CONVIENE REVISAR EL CUADRANTE OFICIAL ANTES DEL DESPLAZAMIENTO POR SI SE PRODUCE ALGÚN AJUSTE.
+            </p>
+        </article>
 
-            <div class="campo-form">
-                <label for="nombre">NOMBRE:</label>
-                <input type="text" id="nombre" name="nombre">
+        <!-- CARTELERÍA B -->
+        <section class="bloque-cartel">
+            <h2 class="etiqueta-dia">CARTELERÍA B·</h2>
+            
+            <div class="cartel-contenedor">
+                <img src="multimedia/cartel.png" alt="Cartel Festival B 2026">
+                <a href="multimedia/cartel festival b.png" download class="btn-descargar">DESCARGAR·</a>
             </div>
+        </section>
 
-            <div class="form">
-                <label for="mail">MAIL:</label>
-                <input type="email" id="mail" name="mail">
-            </div>
-
-            <button type="submit" class="btn-enviar">ENVIAR</button>
-        </form>
     </main>
 
 
-        <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer id="footer">
         <div class="footer-contenedor">
             
@@ -110,7 +117,7 @@
 
         </div>
     </footer>
-
+    
     <!-- JS -->
     <script src="js/script.js"></script>
 </body>
