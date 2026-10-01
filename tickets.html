@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICKETS FESTIVAL B·</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="multimedia/LOGO BUSCADOR.png">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="barra">
+        <div class="logo">
+            <a href="index.html">
+                <img src="multimedia/LOGO MENU.png" alt="FSTVL B.">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="series.html">B·Series</a></li>
+            <li><a href="horarios.html">Horarios</a></li>
+            <li><a href="tickets.html" class="btn-tickets">TICKETS·</a></li>
+        </ul>
+
+        <div class="hamburger">
+            <img src="multimedia/icons8-menú-30.png" alt="menu">
+        </div>
+    </nav>
+
+    
+    <main class="pagina-entradas">
+
+        <div class="titulo-contenedor-tickets">
+            <h2 class="titulo-tickets">CONSIGUE TUS ENTRADAS B·</h2>
+        </div>
+
+        <!-- FORMULARIO DE COMPRA -->
+        <form id="form-venta-entradas" onsubmit="return comprar()">
+            
+            <div class="campo-ticket">
+                <label for="nombre">NOMBRE:</label>
+                <input type="text" id="nombre" name="user_name" required>
+            </div>
+
+            <div class="campo-ticket">
+                <label for="correo">MAIL:</label>
+                <input type="email" id="correo" name="user_email" required>
+            </div>
+
+            <div class="campo-ticket">
+                <label for="exposicion">TIPO DE ENTRADA:</label>
+                <select id="exposicion" onchange="costeTotal()" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="e1">Entrada General - 78,50 €</option>
+                    <option value="e2">Entrada de día - 29,99 €</option>
+                    <option value="e3">Entrada VIP - 120,00 €</option>
+                </select>
+            </div>
+
+            <div class="campo-ticket">
+                <label for="numero">NÚMERO DE ENTRADAS:</label>
+                <input type="number" id="numero" min="1" max="10" required oninput="costeTotal()">
+            </div>
+
+            <div class="total-pagar">
+                <p>TOTAL A PAGAR: <span id="coste">0</span></p>
+            </div>
+
+            <button type="submit" class="btn-comprar">COMPRAR</button>
+        </form>
+
+        <!-- CASHLESS -->
+        <section class="info-cashless">
+            <h3>FSTVL•B CASHLESS</h3>
+            <ul>
+                <li>FSTVL•B CASHLESS ES EL ÚNICO MÉTODO DE PAGO EN FESTIVAL•B 2026.</li>
+                <li>ES 100% GRATUITO, SIN GASTOS DE GESTIÓN POR RECARGAS, PAGOS O DEVOLUCIONES.</li>
+                <li>FUNCIONA MEDIANTE UN CHIP DE PLÁSTICO INTEGRADO EN TU PULSERA DEL FESTIVAL, QUE OBTENDRÁS EN EL ACCESO AL FESTIVAL•B 2026.</li>
+                <li>NO TIRES TU PULSERA DESPUÉS DEL FESTIVAL, LA NECESITARÁS PARA SOLICITAR EL REEMBOLSO DEL DINERO QUE TE HAYA SOBRADO.</li>
+            </ul>
+
+            <h3>CÓMO CARGAR SALDO DURANTE EL FESTIVAL</h3>
+            <ul>
+                <li>A TRAVÉS DE TU SMARTPHONE, ESCANEANDO EL CÓDIGO QR DE TU PULSERA (OPCIÓN RECOMENDADA)</li>
+                <li>EN EL PUNTO FSTVL•B CASHLESS (SOLO EN EFECTIVO Y SIEMPRE EN IMPORTES MÚLTIPLOS DE 5€)</li>
+                <li>EN LOS TÓTEMS DE AUTOSERVICIO (SOLO CON TARJETA).</li>
+                <li>PAGA TODAS TUS COMPRAS EN EL FESTIVAL SOLAMENTE ESCANEANDO TU PULSERA.</li>
+                <li>PUEDES CONSULTAR TU SALDO EN CUALQUIER MOMENTO ESCANEANDO EL CÓDIGO QR DE TU PULSERA O EN LOS TÓTEMS AUTOSERVICIO.</li>
+            </ul>
+        </section>
+
+        <!-- FOTOS -->
+        <section class="seccion-carrusel">
+            <div class="carrusel-pantalla">
+                <div class="slide active">
+                    <img src="multimedia/galería foto 1.jpg" alt="Festival Foto 1">
+                </div>
+                <div class="slide">
+                    <img src="multimedia/galería foto 2.png" alt="Festival Foto 2">
+                </div>
+                <div class="slide">
+                    <img src="multimedia/galería foto 3.png" alt="Festival Foto 3">
+                </div>
+                <div class="slide">
+                    <img src="multimedia/galería foto 4.png" alt="Festival Foto 4">
+                </div>
+            </div>
+
+            <button type="button" class="carrusel-btn btn-prev" onclick="cambiarSlide(-1)">&#10094;</button>
+            <button type="button" class="carrusel-btn btn-next" onclick="cambiarSlide(1)">&#10095;</button>
+        </section>
+
+    </main>
+
+    <!-- CONFIRMACIÓN -->
+    <div id="modal">
+        <div class="contenido-modal">
+            <h2>COMPRA REALIZADA CON ÉXITO</h2>
+            <ul>
+                <li><strong>Nombre:</strong> <span id="nom"></span></li>
+                <li><strong>Email:</strong> <span id="corr"></span></li>
+                <li><strong>Entrada:</strong> <span id="ex"></span></li>
+                <li><strong>Cantidad:</strong> <span id="num"></span></li>
+                <li><strong>Total:</strong> <span id="ct"></span></li>
+            </ul>
+            <button type="button" class="btn-comprar" onclick="cerrarVentana()">ACEPTAR</button>
+        </div>
+    </div>
+
+    
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="footer-contenedor">
+            <div class="footer-info">
+                <div class="info">
+                    <p class="info-titulo">UBICACIÓN:</p>
+                    <p>PARC DEL FÒRUM<br>C. DE LA PAU, 12<br>08930 BARCELONA<br>METRO FÒRUM (L14)</p>
+                </div>
+
+                <div class="info">
+                    <p class="info-titulo">CONTACTO:</p>
+                    <p>hola@fatvlb.com<br>press@fstvlb.com</p>
+                </div>
+
+                <div class="info">
+                    <p class="info-titulo">SÍGUENOS:</p>
+                    <div class="redes-iconos">
+                        <a href="https://www.instagram.com/fstvl_b/?hl=es"><img src="multimedia/logo insta.png" alt="Instagram"></a>
+                        <a href="https://x.com/Fstvl_B"><img src="multimedia/logo twitter.png" alt="X"></a>
+                        <a href="https://www.facebook.com/fstvlb/?locale=es_ES"><img src="multimedia/logo facebook.png" alt="Facebook"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-marcas">
+                <div class="logo-festival-footer">
+                    <img src="multimedia/logo festival b 2026.png" alt="FSTVL B 26">
+                </div>
+                <div class="sponsors">
+                    <img src="multimedia/logo voll damm.png" alt="Voll-Damm">
+                    <img src="multimedia/logo adidas.png" alt="Adidas">
+                    <img src="multimedia/logo imagin.png" alt="Imagin">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

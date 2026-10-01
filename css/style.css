@@ -655,6 +655,9 @@ body {
 
 
 /* HORARIOS */
+/* ===================================================
+   PÁGINA HORARIOS (BASE COMPARTIDA)
+   =================================================== */
 .seccion-horarios {
     background-color: var(--color-black);
     color: var(--color-white);
@@ -664,6 +667,7 @@ body {
     padding: 4.5rem 1.5rem 5rem 1.5rem;
 }
 
+/* Bloques de días */
 .bloque-dia {
     display: flex;
     flex-direction: column;
@@ -673,6 +677,7 @@ body {
     margin-bottom: 4.5rem;
 }
 
+/* Carteles amarillos de cabecera */
 .etiqueta-dia {
     display: inline-block;
     background-color: var(--bg-yellow);
@@ -686,6 +691,7 @@ body {
     white-space: nowrap;
 }
 
+/* Párrafos descriptivos con tipografía monoespaciada */
 .texto-horario {
     font-family: 'Anonymous Pro', monospace;
     font-size: 0.85rem;
@@ -694,6 +700,7 @@ body {
     color: var(--color-white);
 }
 
+/* Contenedor del cartel */
 .bloque-cartel {
     display: flex;
     flex-direction: column;
@@ -718,6 +725,7 @@ body {
     transition: opacity 0.3s ease;
 }
 
+/* Botón DESCARGAR en el centro */
 .btn-descargar {
     position: absolute;
     top: 50%;
@@ -736,6 +744,7 @@ body {
     white-space: nowrap;
 }
 
+/* Efecto hover: oscurece el cartel y muestra el botón */
 .cartel-contenedor:hover img {
     opacity: 0.55;
 }
@@ -750,8 +759,236 @@ body {
 
 
 
+/* TICKETS */
+.pagina-entradas {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4.5rem 1.5rem 5rem 1.5rem;
+    box-sizing: border-box;
+}
 
-/* RESPONSIVE */
+.titulo-contenedor-tickets {
+    margin-bottom: 3.5rem;
+    text-align: center;
+}
+
+.titulo-tickets {
+    display: inline-block;
+    background-color: var(--bg-yellow);
+    color: var(--color-black);
+    font-family: 'Neue Haas', sans-serif;
+    font-weight: 900;
+    font-size: 1.15rem;
+    padding: 4px 14px;
+    letter-spacing: 0.5px;
+}
+
+/* Formulario */
+#form-venta-entradas {
+    width: 100%;
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.campo-ticket {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--bg-yellow);
+    padding: 0.45rem 0.8rem;
+    background: transparent;
+}
+
+.campo-ticket label {
+    font-family: 'Neue Haas', sans-serif;
+    font-weight: 900;
+    font-size: 0.75rem;
+    color: var(--bg-yellow);
+    white-space: nowrap;
+    margin-right: 0.8rem;
+}
+
+.campo-ticket input,
+.campo-ticket select {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-white);
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 0.85rem;
+    width: 100%;
+}
+
+.campo-ticket select option {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.total-pagar {
+    text-align: center;
+    font-family: 'Anonymous Pro', monospace;
+    font-style: italic;
+    font-size: 0.85rem;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.btn-comprar {
+    align-self: center;
+    background-color: var(--bg-yellow);
+    color: var(--color-black);
+    font-family: 'Neue Haas', sans-serif;
+    font-weight: 900;
+    font-size: 0.9rem;
+    padding: 6px 18px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.btn-comprar:hover {
+    color: var(--color-white);
+}
+
+/* Cashless */
+.info-cashless {
+    max-width: 580px;
+    width: 100%;
+    margin-top: 5rem;
+    text-align: center;
+    font-family: 'Anonymous Pro', monospace;
+}
+
+.info-cashless h3 {
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 0.85rem;
+    margin: 2.2rem 0 1.2rem 0;
+    letter-spacing: 0.5px;
+}
+
+.info-cashless ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.72rem;
+    line-height: 1.45;
+}
+
+.info-cashless li {
+    margin-bottom: 0.4rem;
+}
+
+.info-cashless li::before {
+    content: "• ";
+}
+
+/* Carrusel */
+.seccion-carrusel {
+    position: relative;
+    max-width: 680px;
+    width: 100%;
+    margin-top: 5rem;
+    overflow: hidden;
+}
+
+.carrusel-pantalla {
+    width: 100%;
+    height: 380px;
+    position: relative;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* flechas */
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: var(--bg-yellow);
+    color: var(--color-black);
+    border: none;
+    font-weight: 900;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.carrusel-btn:hover {
+    color: var(--color-white);
+}
+
+.btn-prev { left: 18px; }
+.btn-next { right: 18px; }
+
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.contenido-modal {
+    background-color: var(--color-black);
+    border: 2px solid var(--bg-yellow);
+    padding: 2rem;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    color: var(--color-white);
+    font-family: 'Anonymous Pro', monospace;
+}
+
+.contenido-modal h2 {
+    font-family: 'Neue Haas', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--bg-yellow);
+}
+
+.contenido-modal ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.8rem;
+    text-align: left;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+
+
+
+/* RESPONSIVE MÓVIL */
 
 @media (max-width: 768px) {
 
@@ -904,7 +1141,7 @@ body {
         opacity: 1;
     }
 
-    .seccion-horarios {
+   .seccion-horarios {
         padding: 3.5rem 1.4rem 4rem 1.4rem;
     }
 
@@ -925,5 +1162,27 @@ body {
 
     .btn-descargar {
         opacity: 1;
+    }
+
+    .pagina-entradas {
+        padding: 3.5rem 1.4rem 4rem 1.4rem;
+    }
+
+    .titulo-tickets {
+        font-size: 0.95rem;
+    }
+
+    #form-venta-entradas {
+        max-width: 100%;
+    }
+
+    .carrusel-pantalla {
+        height: 240px;
+    }
+
+    .carrusel-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
     }
 }
