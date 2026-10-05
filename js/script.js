@@ -32,7 +32,8 @@ function costeTotal() {
     spanCoste.innerHTML = total + " €";
 }
 
-// PROCESAR COMPRA Y MODAL
+
+// PROCESAR COMPRA
 function comprar() {
     let selectExposicion = document.getElementById("exposicion");
     let textoEntrada = selectExposicion.options[selectExposicion.selectedIndex].text;
@@ -44,14 +45,15 @@ function comprar() {
     document.getElementById("ct").innerHTML = document.getElementById("coste").innerHTML;
 
     document.getElementById("modal").style.display = "flex";
-    return false; // Evita el refresco de formulario
+    return false;
 }
 
 function cerrarVentana() {
     document.getElementById("modal").style.display = "none";
 }
 
-// CARRUSEL DE IMÁGENES
+
+// CARRUSEL
 let slideActual = 0;
 function cambiarSlide(direccion) {
     let diapositivas = document.getElementsByClassName("slide");
